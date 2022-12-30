@@ -14,8 +14,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       //en el evento no se maneja el estado pero en el emit se genera el nuevo valor
       emit(UserSetState(event.user));
     });
-      on<DeleteUser>((event, emit) => emit( const UserInitialState()));
-
+    on<DeleteUser>((event, emit) => emit(const UserInitialState()));
 
     on<ChangeUserAge>((event, emit) {
       if (!state.existUser) return;
@@ -23,7 +22,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     });
     on<AddProfession>((event, emit) {
       if (!state.existUser) return;
-    
+
       final professions = [...state.user!.profesiones, event.profession];
       emit(UserSetState(state.user!.copyWith(profesiones: professions)));
     });

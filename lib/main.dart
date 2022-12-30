@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:estados/block/user/user_bloc.dart';
+import 'package:estados/bloc/user/user_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:estados/pages/pagina2_page.dart';
